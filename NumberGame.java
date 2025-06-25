@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class NumberGame {
    
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         Random random = new Random();
         
         int Min = 1;
@@ -26,7 +26,7 @@ public class NumberGame {
             
             while (attempts < Attempts) {
                 System.out.print("Enter your number: ");
-                int userGuess = scanner.nextInt();
+                int userGuess = sc.nextInt();
                 
                 attempts++;
                 
@@ -49,7 +49,7 @@ public class NumberGame {
             System.out.println("Your final score: " + Points + "\n");
             
             System.out.print("Do you want to play another round? (yes/no): ");
-            String playAgainResponse = scanner.next().toLowerCase();
+            String playAgainResponse = sc.next().toLowerCase();
             if (!playAgainResponse.equals("yes")) {
                 playAgain = false;
             }
@@ -57,6 +57,6 @@ public class NumberGame {
         
         System.out.println("Thank you for playing! Your final score: " + Points);
         
-        scanner.close();
+        
     }
 }
